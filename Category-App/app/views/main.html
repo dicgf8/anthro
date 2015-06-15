@@ -1,0 +1,14 @@
+<p class="breadcrumbs">
+	<span ng-repeat="ancestor in ancestors">
+		{{ancestor.displayName}}
+	</span>
+</p>
+<div class="product-container">
+	<div class="product-item" ng-repeat="dress in dresses">
+		<div>
+			<img ng-src="{{dress.src}}" alt="{{dress.displayName}}" dress-img-hover />
+		</div>
+		<p>{{dress.description}}</p>
+		<p class="{{dressPriceClass()}}">{{dressPrice()}}</p>
+	</div>
+</div>

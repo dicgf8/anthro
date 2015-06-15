@@ -1,0 +1,148 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+/* Common Styles Begin */
+
+body {
+	padding-top: 8em;
+	font-family: Georgia, serif;
+	-webkit-font-smoothing: antialiased;
+	background: #fff url("/images/body-background.jpg") repeat left top;
+}
+
+hr {
+	clear: both;
+	opacity: .05;
+	border: 0.0625rem solid #5C5C5F;
+}
+
+.usd {
+	&:before {
+		content: '$';
+	}
+}
+
+.breadcrumbs {
+	color: #5d919c;
+	font-size: .7em;
+	margin-left: 2rem;
+	text-transform: lowercase;
+
+	& > span {
+		&:hover {
+			color: #05728c;
+		}
+
+		&:after {
+			content: "";
+			height: 0.625em;
+			width: 1.25em;
+			display: inline-block;
+			background: transparent url("/images/breadcrumb.png") no-repeat center center;
+		}
+
+		&:last-child:after {
+			background: none;
+		}
+	}
+}
+
+/* Common Styles End */
+
+/* Index Template Styles Begin */
+
+#global-header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	position: fixed;
+	background: #fff url("/images/body-background.jpg") repeat left top;
+
+	& > div {
+		height: 1.875rem;
+		background: #fff url("/images/search-header-background.png") no-repeat 29% center;
+	}
+
+	& > h1 {
+		height: 1.0625em;
+		margin: 1.5rem auto 0.2rem;
+		background: transparent url("/images/anthro-header-logo.png") no-repeat center center;
+	}
+
+	& > hr {
+		margin-bottom: 0;
+	}
+}
+
+#global-navigation {
+	font: normal 0.75em Georgia, serif;
+
+	& > ul {
+		max-width: 48.75rem;
+		min-width: 11.25em;
+		min-height: 1.5rem;
+		margin: 0 auto;
+		list-style-type: none;
+		text-transform: uppercase;
+
+		& > li {
+			width: 11.25em;
+			float: left;
+			padding-bottom: .5rem;
+
+			& > a {
+				color: #716164;
+				text-decoration: none;
+
+				&:hover {
+					color: #5d9ab2;
+				}
+
+				&.active {
+					color: #5d9ab2;
+				}
+			}
+		}
+	}
+}
+
+/* Index Template Styles End */
+
+/* Product Styles Begin */
+
+.product-container {
+	display: flex;
+	width: 100%;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	position: relative;
+
+	& > .product-item {
+		width: 233px;
+		padding: .7em 0.8em;
+		flex-grow: 0;
+		flex-shrink: 0;
+
+		& > div {
+			& > img {
+				width: 100%;
+			}
+		}
+
+		& > p {
+			margin: .4rem 0 0;
+			font-size: .73em;
+			color: #5c5c5f;
+
+			&:last-child {
+				margin-top: 0;
+				font-size: .63em;
+			}
+		}
+	}
+}
+
+/* Product Styles End */
